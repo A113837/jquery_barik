@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+	#div-1{
+		width: 50%
+		height: 50%;
+	}
+</style>
+</head>
+<body>
+<div id="div-1">
+	<header id="header" data-att="heading" ng-attr="model">
+		<h1 class="header-primary">This is main header</h1>
+		<span class="slogan">This is slogan</span>
+	</header>
+
+	<form action="#" method="POST">
+		<input type="text" placeholder="Enter test" name="" value="hello world"><br><br>
+		<input type="password" placeholder="Enter password" name=""><br><br>
+		<input type="submit" value="Send" name="">
+
+
+	</form>
+	
+</div>
+<section id="main-section">
+	<div class="post">
+		<h2 class="post-title">This is post title 1</h2>
+		<p class="post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		<a class="post-cta" href="#">More...</a>
+	</div>
+
+	<div class="post">
+		<h2 class="post-title">This is post title 1</h2>
+		<p class="post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		<a class="post-cta" href="#">More...</a>
+	</div>
+
+	<div class="post">
+		<h2 class="post-title">This is post title 1</h2>
+		<p class="post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		<a class="post-cta" href="#">More...</a>
+	</div>
+</section>
+<br><br>
+
+<div class="parent">
+	<div class="child">Child 1</div>
+	<div class="child">Child 2</div>
+	<div class="child">Child 3</div>
+	<div class="child">Child 4</div>
+</div>
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+	$('.post').parent().css('backgroundColor', 'grey');
+	$('.post-title').parent().css('backgroundColor', 'orange');
+
+	$('.child').parent().css('backgroundColor', 'blue');
+});
+</script>

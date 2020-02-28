@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+	#div-1{
+		width: 50%
+		height: 50%;
+	}
+</style>
+</head>
+<body>
+
+<br><br>
+
+<div class="parent">
+	<p>Paragraph One</p>
+	<p>Paragraph Two</p>
+	<p>Paragraph Three</p>
+	<p>Paragraph Four</p>
+	<p>Paragraph Five</p>
+	<p class="child">Paragraph Six</p>
+	<div>
+		<p class="sub-child">This is also a paragraph</p>
+	</div>
+</div>
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+	$('.parent').children().css('backgroundColor', 'cyan');
+
+	$('.parent').children('.child').css('backgroundColor', 'orange');
+
+	$('.parent p:first-child').css({'backgroundColor': 'yellow', 'height': '100px'});
+
+	$('.parent p:last-of-type').css('color', 'blue');
+	$('.parent p:first-of-type').css('font-size', '30px');
+
+	$('.parent p:nth-of-type(2)').css("width", '200px');
+	$('.parent p:nth-last-of-type(2)').css("width", '300px');
+
+	$('.parent').find('.sub-child').css({'width': '200px', 'height': '100px'});
+
+
+});
+</script>

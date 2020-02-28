@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+	#div-1{
+		width: 50%
+		height: 50%;
+	}
+</style>
+</head>
+<body>
+<div id="div-1">
+	<header id="header" data-att="heading" ng-attr="model">
+		<h1 class="header-primary">This is main header</h1>
+		<span class="slogan">This is slogan</span>
+	</header>
+
+	<form action="#" method="POST">
+		<input type="text" placeholder="Enter test" name="" value="hello world"><br><br>
+		<input type="password" placeholder="Enter password" name=""><br><br>
+		<input type="submit" value="Send" name="">
+
+
+	</form>
+	
+</div>
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+	$('[class=slogan]').css('color', 'blue');
+
+	$('[class=header-primary]').css('color', 'red');
+
+	$('[type=text]').css('padding', '10px');
+
+	$('[type=password]').css('padding', '20px');
+});
+</script>
