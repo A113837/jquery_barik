@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+
+</style>
+</head>
+<body>
+
+		<div>Div 1</div>
+	   <div>Div 2</div>
+	   <div class="div" style="background-color: blue;">Div 3</div>
+	   <p>Paragraph</p>
+	   <div>Div 4</div>
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+	$('div').first().css('background-color', 'lightblue');
+
+	$('div').last().css('backgroundColor', 'chocolate');
+
+	$('div').not('.div').css('fontSize', '40px');
+
+	$('div').filter('.div').css('backgroundColor', 'yellow');
+
+});	
+</script>

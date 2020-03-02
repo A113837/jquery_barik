@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+
+</style>
+</head>
+<body>
+
+	<body style="background-color: orange;">
+
+	    <header id="header">
+	        <h1 class="header-primary">This is main header</h1>
+	        <span class="slogan">This is slogan</span>
+
+	        <div>
+	            hello world
+	            <div class="list">
+	                <p>first</p>
+	                <p>second</p>
+	                <p>Third</p>
+	                <p>Fourth</p>
+	                <p class="except">Fifth</p>
+	            </div>
+	        </div>
+	    </header>
+
+	    <ul>
+	        <li>List 1</li>
+	        <li>List 2</li>
+	        <li>List 3</li>
+	        <li style="background-color: blue;">List 4</li>
+	    </ul>
+
+
+
+	</body>
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+	$('li').css('backgroundColor', 'cyan');
+
+	$('ul li:eq(0)').css('backgroundColor', 'green');
+
+	$('.except').parents().eq(1).css('backgroundColor', 'yellow');
+
+});	
+</script>
