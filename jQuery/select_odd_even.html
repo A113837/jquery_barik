@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+	#div-1{
+		width: 50%
+		height: 50%;
+	}
+</style>
+</head>
+<body>
+
+<br><br>
+
+<div class="container">
+	<p>Paragraph One</p>
+	<p>Paragraph Two</p>
+	<p>Paragraph Three</p>
+	<p>Paragraph Four</p>
+	<p>Paragraph Five</p>
+	<p>Paragraph Six</p>
+
+</div>
+
+<table>
+        <thead style="background-color: red;">
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Email account</th>
+                <th>Profession</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: orange;">
+                <td>Md. A.</td>
+                <td>Barik</td>
+                <td>mdabarik19@gmail.com</td>
+                <td>Web Developer</td>
+            </tr>
+            <tr style="background-color: grey;">
+                <td>Md. A.</td>
+                <td>Barik</td>
+                <td>mdabarik19@gmail.com</td>
+                <td>Web Developer</td>
+            </tr>
+            <tr style="background-color: orange;">
+                <td>Jone</td>
+                <td>Doe</td>
+                <td>jonh19@gmail.com</td>
+                <td>Teacher</td>
+            </tr>
+            <tr style="background-color: grey;">
+                <td>Jane</td>
+                <td>Doe</td>
+                <td>janedoe77@gmail.com</td>
+                <td>Programmer</td>
+            </tr>
+            <tr style="background-color: orange;">
+                <td>Jane</td>
+                <td>Mark</td>
+                <td>mark013@gmail.com</td>
+                <td>Software Engineer</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+	$('.container').css('backgroundColor', 'orange');
+
+	$('.container p:odd').css('backgroundColor', 'green');
+	$('.container p:even').css('backgroundColor', 'cyan');
+
+	$('thead').css('backgroundColor', 'purple');
+
+	$('tbody tr:even').css('backgroundColor', 'pink');
+	$('tbody tr:odd').css({'font-size':'20px', 'color': 'red'});
+
+});
+</script>
