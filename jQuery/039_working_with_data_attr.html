@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style>
+
+</style>
+</head>
+<body>
+    
+    <div class="first-div div1" data-name="ultimate-dream" data-hobbies="google-engineer" data-passion="microsoft-engineer" style="color:orange">I want to be a Microsoft Engineer</div>
+    <div class="second-div">I want to be a Google Engineer</div>
+
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	console.log($('.first-div').data('name'));
+
+	console.log($('.first-div').data());
+
+	let firstDiv = $('.first-div').data('passion', 'something else');
+
+	console.log(firstDiv.data('passion'));
+
+});
+
+
+</script>

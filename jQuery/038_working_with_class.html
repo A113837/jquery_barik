@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style>
+
+</style>
+</head>
+<body>
+    
+    <div class="first-div div1" data-attr="attr-name" style="color:orange">I want to be a Microsoft Engineer</div>
+    <div class="second-div">I want to be a Google Engineer</div>
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	$('.first-div').hasClass('div2');
+	console.log($('.first-div').hasClass('div1'));
+
+	$('.first-div').addClass('div3');
+	$('.first-div').removeClass('div2');
+
+	$('.first-div').toggleClass('div1');
+});
+
+
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style>
+
+</style>
+</head>
+<body>
+    
+    <div class="microsoft">I want to be a Microsoft Engineer</div>
+    <div class="google">I want to be a Google Engineer</div>
+
+    <ul>
+    	<li>First order element <span>me a span element</span></li>
+    	<li>Second order element</li>
+    	<li>Third order element</li>
+    	<li>Fourth order element</li>
+    	<li>Fifth order element</li>
+    </ul>
+
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	$('.google').remove();
+	$('.microsoft').empty();//kosongkan content
+
+	$('li:nth-of-type(3)').remove();
+	$('li:even').html('<h2>Replaced</h2>');
+
+});
+
+
+</script>

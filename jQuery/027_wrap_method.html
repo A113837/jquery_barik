@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style>
+
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <p id="para">This is first paragraph</p>
+        <p>This is second paragraph</p>
+    </div>
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	$('#para').wrap('<div style="color: red"></div>');
+
+	$('p').wrap(function(){
+		return "<div class='className' id='idName'></div>"
+	});
+
+
+
+
+
+});
+
+
+
+/*
+The innerHeight() or innerWidth() method returns the inner height of the FIRST matched element and it includes padding, but not border and margin.
+*/
+
+/*
+The outerWidth() or outerHeight() method returns the outer width of the FIRST matched element and it includes padding and border, but not margin.
+*/
+</script>

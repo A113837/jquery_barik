@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style>
+
+</style>
+</head>
+<body>
+
+    <p>This is first paragraph
+        <span>Hello world</span>
+    </p>
+    <p>This is second paragraph</p>
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	//get the content
+	console.log($('p').html());
+
+	//set content
+	$('p').html('<b>Hello World</b>');
+
+	console.log($('p').html());
+
+
+});
+
+
+</script>

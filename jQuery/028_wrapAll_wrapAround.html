@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style>
+
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <p>This is first paragraph</p>
+        <span>this is span</span>
+        <p>This is second paragraph</p>
+    </div>
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+
+	$('p').wrapAll('<div></div>');
+	$('p').wrap('<div></div>');
+
+	$('p').wrapInner('<b></b>');
+
+
+
+
+
+});
+
+
+
+/*
+The innerHeight() or innerWidth() method returns the inner height of the FIRST matched element and it includes padding, but not border and margin.
+*/
+
+/*
+The outerWidth() or outerHeight() method returns the outer width of the FIRST matched element and it includes padding and border, but not margin.
+*/
+</script>

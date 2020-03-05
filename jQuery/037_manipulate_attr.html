@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style>
+
+</style>
+</head>
+<body>
+    
+    <div class="first-div div1" data-name="whatever" style="color:orange">I want to be a Microsoft Engineer</div>
+    <div class="second-div">I want to be a Google Engineer</div>
+
+    <a class="link" href="https://udemy.com">Udemy</a>
+    <br><br>
+
+    <form action="#">
+        <input type="text" value="Hello world!"> <br>
+        <input type="checkbox" checked>
+    </form>
+
+
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	console.log($('.first-div').attr('class'));
+	$('.first-div').attr('class', 'classname');
+
+	$('.link').attr('href', 'https://goolge.com');
+	$('.link').text('Google');
+
+	$('input[type=text]').val('value');
+
+	$('input[type=checkbox]').prop('checked');
+});
+
+
+</script>

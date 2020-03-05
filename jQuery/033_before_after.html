@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style>
+
+</style>
+</head>
+<body>
+
+    <p>This is a paragraph</p>
+    <p>This is another paragraph</p>
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	$('p').before('<h2>Hello World Before</h2>');
+	$('p').after('<h2>Hello World After</h2>');
+
+	$('<h3>Hello World insertBefore</h3>').insertBefore('p');
+	$('<h3>Hello World insertAfter</h3>').insertAfter('p');
+
+
+});
+
+
+</script>
