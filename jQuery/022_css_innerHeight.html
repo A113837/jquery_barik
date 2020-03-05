@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+
+</style>
+</head>
+<body>
+    
+    
+     <div style="height:100px;width:300px;padding:20px;margin:3px;border:5px solid blue;background-color:lightblue;">Test Box</div><br>
+
+    <button>What is the inner height div?</button>
+
+
+
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	console.log($('div').innerHeight());
+
+	console.log($('div').innerWidth());
+
+	console.log($('div').outerHeight());
+
+	console.log($('div').outerWidth());
+
+});	
+
+
+
+/*
+The innerHeight() or innerWidth() method returns the inner height of the FIRST matched element and it includes padding, but not border and margin.
+*/
+
+/*
+The outerWidth() or outerHeight() method returns the outer width of the FIRST matched element and it includes padding and border, but not margin.
+*/
+</script>

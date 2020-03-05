@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+
+</style>
+</head>
+<body>
+
+	<body style="background-color: orange;">
+
+	    <header id="header" style="font-size: 30px; color: red; text-transform: uppercase;">
+	            <h1 class="heading-primary" style="font-weight: 100;">This is main header</h1>
+	        </header>
+	        
+	        <div class="container" style="background-color: blue; color: white; padding: 5px;"> 
+	            <div class="post" style="background-color: grey; padding: 10px; margin: 10px;">
+	                <h2>This is heading</h2>
+	                <p> 
+	                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+	                </p>
+	                <a href="#">More...</a>
+	            </div>
+	            <div class="post" style="background-color: grey; padding: 10px; margin: 10px;">
+	                <h2>This is heading</h2>
+	                <p> 
+	                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+	                </p>
+	                <a href="#">More...</a>
+	            </div>
+	            <div class="post" style="background-color: grey; padding: 10px; margin: 10px;">
+	                <h2>This is heading</h2>
+	                <p> 
+	                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+	                </p>
+	                <a href="#">More...</a>
+	            </div>
+	        </div>  
+
+	        <footer id="footer" style="background-color: grey; color: white; padding: 5px;"> 
+	            <p>Copyright © 2019. All right reserved.</p>
+	        </footer>
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+	$('#header').css('fontSize', '20px');
+
+	$('#header').css({
+		'font-size':'30px',
+		'color': 'blue',
+		'font-weight': '50',
+		'text-transform': 'uppercase'
+	});
+
+	$('.heading-primary').css('font-weight', '20');
+
+	$('.container').css({
+		'background-color': 'lightgreen',
+		'color': 'grey',
+		'padding': '5px',
+		'width': "60%"
+	});
+
+	$('.post').css({
+		'background-color': 'yellow',
+		'padding': '15px',
+
+	});
+
+});	
+</script>

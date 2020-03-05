@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        background-color: orange;
+        width: 200px;
+        height:200px;
+        padding: 20px;
+        position: relative;
+        margin: 100px;
+    }
+    .box {
+        background-color: black;
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        top: 50px;
+    }
+
+</style>
+</head>
+<body>
+    
+    
+     <div class="container">
+        <div class="box">
+            Box
+        </div>
+    </div>
+
+
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	console.log($('.box').offset());
+
+	let box = $('.box').offset();
+	console.log((box.top + ', '+box.left));
+
+	let box2 = $('.box').position();
+	console.log((box2.top + ', '+box2.left));
+
+
+
+});	
+
+
+
+/*
+The innerHeight() or innerWidth() method returns the inner height of the FIRST matched element and it includes padding, but not border and margin.
+*/
+
+/*
+The outerWidth() or outerHeight() method returns the outer width of the FIRST matched element and it includes padding and border, but not margin.
+*/
+</script>

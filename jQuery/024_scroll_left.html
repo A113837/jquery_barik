@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style>
+        .container {
+            border: 1px solid black;
+            width: 100px;
+            height: 130px;
+            overflow: auto
+        }
+</style>
+</head>
+<body>    
+
+    <div class="container">
+        The longest word in the english dictionary is: pneumonoultramicroscopicsilicovolcanoconiosis.
+    </div><br>
+
+    <button>
+        Return the horizontal position of the scrollbar
+    </button>
+
+
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	$('button').click(function(){
+		console.log($('div').scrollLeft()+'px');
+	});
+
+
+});	
+
+
+
+/*
+The innerHeight() or innerWidth() method returns the inner height of the FIRST matched element and it includes padding, but not border and margin.
+*/
+
+/*
+The outerWidth() or outerHeight() method returns the outer width of the FIRST matched element and it includes padding and border, but not margin.
+*/
+</script>

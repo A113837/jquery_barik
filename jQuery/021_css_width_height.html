@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+
+</style>
+</head>
+<body>
+    
+    
+    <div class="container"> 
+
+       <div class="box-1" style="width: 100px; height: 50px; background-color: orange;">
+           This is box 1
+       </div> <br>
+
+       <div class="box-2" style="width: 200px; height: 40px; background-color: blue;">
+           This is box 2
+       </div> <br>
+
+       <div class="box-3" style="width: 300px; height: 30px; background-color: green;">
+           This is box 3
+       </div>
+
+    </div> 
+
+
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	$('.box-1').width('50%').height('50px');
+
+	$('.box-2').width('100px').height('100px').css('background-color','lightblue');
+
+	$('.box-3').css({
+		'width': '200px',
+		'height': '200px',
+		'background-color': 'purple'
+	});
+
+});	
+</script>
