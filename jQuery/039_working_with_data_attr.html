@@ -29,6 +29,12 @@ $(document).ready(function(){
 
 	console.log(firstDiv.data('passion'));
 
+	$('.first-div').removeAttr('data-passion');
+	console.log(firstDiv.data('passion'));
+
+	$('.first-div').attr('data-passion', 'something else');
+
+
 });
 
 
