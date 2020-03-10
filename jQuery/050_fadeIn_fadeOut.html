@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+	        
+	</style>
+</head>
+<body>
+
+    	<div class="box" style="width:200px;height:200px;background-color:black;color:white">
+    	        This is a box
+    	    </div>
+
+    	    <br>
+    	    <button class="fadein">Fadein</button>
+    	    <br> <br>
+    	    <button class="fadeout">Fadeout</button> 
+    	    <br> <br>
+    	    <button class="fadetoggle">FadeToggle</button>
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	$('.fadein').click(function(){
+		$('.box').fadeIn(1000, function(){
+			console.log('fade In');
+		});
+	});
+
+	$('.fadeout').click(function(){
+		$('.box').fadeOut(1000, function(){
+			console.log('fade Out');
+		});
+	});
+
+	$('.fadetoggle').click(function(){
+		$('.box').fadeToggle(1000, function(){
+			console.log('fade Toggle');
+		});
+	});
+
+
+
+});
+
+
+</script>

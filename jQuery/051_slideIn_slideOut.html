@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+	        
+	</style>
+</head>
+<body>
+
+    	<div class="box" style="display:none;width:200px;height:200px;background-color:black;color:white">
+    	        This is a box
+    	    </div>
+
+    	    <br>
+    	    <button class="slideup">Slide Up</button>
+    	    <br> <br>
+    	    <button class="slidedown">Slide Down</button> 
+    	    <br> <br>
+    	    <button class="slidetoggle">Slide Toggle</button>
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+	console.log('jquery');
+
+	$('.slideup').click(function(){
+		$('.box').slideUp('fast');
+	});
+
+	$('.slidedown').click(function(){
+		$('.box').slideDown(1500, function(){
+			console.log('slidedown');
+		});
+	});
+
+	$('.slidetoggle').click(function(){
+		$('.box').slideToggle(1000);
+	});
+
+
+});
+
+
+</script>

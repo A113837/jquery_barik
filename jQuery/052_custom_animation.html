@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+	        
+	</style>
+</head>
+<body>
+
+    	<div class="box" style="position:absolute;top:0;left:0;width:200px;height:200px;background-color:orange;color:white">
+    	        This is a box
+    	    </div>
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+	console.log('jquery');
+
+	$('.box').animate({
+		left: '400px',
+		top: '300px',
+		width: '100px',
+		height: '100px',	
+	}, 2000, function(){
+		console.log('animate');
+	});
+
+	$('.box').hover(function(){
+		$('.box').stop().animate({
+			left: '10px'
+		}, 500, function(){
+			console.log('animation done');
+		})
+	});
+
+
+});
+
+
+</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+	        
+	</style>
+</head>
+<body>
+
+    	<div class="box" style="display:none;width:200px;height:200px;background-color:orange;color:white">
+    	    This is a box
+    	</div>
+
+    	<br>
+    	<button>Show/Hide</button>
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+/*
+	$('button').click(function(){
+		//$('.box').hide('fast');
+		$('.box').hide(1000, function(){
+			console.log('transition done');
+		});
+	});
+*/
+/*
+	$('button').click(function(){
+		//$('.box').hide('fast');
+		//1000, slow, fast
+		$('.box').show('fast', function(){
+			console.log('transition done');
+		});
+	});
+*/
+	$('button').click(function(){
+		//$('.box').hide('fast');
+		//1000, slow, fast
+		$('.box').toggle('slow', function(){
+			console.log('transition done');
+		});
+	});
+
+});
+
+
+</script>
