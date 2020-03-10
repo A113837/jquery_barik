@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+	        .box {
+	            background-color: white;
+	            max-width: 400px;
+	            height: 300px;
+	            box-shadow: 0 10px 10px rgba(0,0,0,.2);
+	            margin: auto;
+	            font-size: 50px;
+	            font-weight: 100;
+	        }
+	    </style>
+</head>
+<body>
+
+    <div class="box">
+        This is a box
+    </div>
+
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	//click
+	$('.box').click(function(){
+		console.log('you have click');
+		console.log(event.pageY);
+		
+	});
+
+	$('.box').hover(function(){
+		console.log('mouse Entered');
+	}, function(){
+		console.log('mouse Leaved');
+	});
+
+	$('.box').mousedown(function(){
+		console.log('mouse down');
+	});
+
+	$('.box').mouseup(function(){
+		console.log('mouse up');
+	});
+
+	$('.box').mousemove(function(){
+		console.log('mouse move'+ event.pageY+' '+event.pageX);
+	});
+
+
+});
+
+
+</script>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+
+    <div class="box" style="position: absolute;top:0;left:0">
+        <img src="./bus.png" alt="Awesome bus" style="height:200px;width:300">
+    </div>
+
+
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	//keydown
+	$(document).keydown(function(e){
+		console.log(e.which);
+		//bole juga event.which kalau parameter event
+	});
+
+	$(document).keyup(function(e){
+		console.log('you leaved the click');
+	});
+
+	$(document).keydown(function(e){
+		let LEFT = 37;
+		let RIGHT = 39;
+		let UP = 38;
+		let DOWN = 40;
+
+		console.log(e.which);
+		if(e.which === LEFT)
+		{
+			console.log('left arrow clicked');
+			$('.box').css('left', '-=10px');
+		}
+		else if(e.which === RIGHT)
+		{
+			console.log('right arrow clicked');
+			$('.box').css('left', '+=10px');
+		}
+		else if(e.which === UP)
+		{
+			console.log('up arrow clicked');
+			$('.box').css('top', '-=10px');
+		}
+		else if(e.which === DOWN)
+		{
+			console.log('down arrow clicked');
+			$('.box').css('top', '+=10px');
+		}
+
+	});
+
+});
+
+
+</script>

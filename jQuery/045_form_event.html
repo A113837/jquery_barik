@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+	        body {
+	            padding: 10px 50px;
+	        }
+	        .focus, .blur, input[type=submit], .change {
+	            padding: 10px;
+	            outline: none;
+	            border: 1px solid grey;
+	            border-radius: 5px;
+	            font-size: 20px;
+	            width: 100%;
+	        } 
+	</style>
+</head>
+<body>
+
+    <form>
+           <input class="focus" type="text" placeholder="Focusin and focusout event"> <br> <br>
+           <input class="blur" type="text" placeholder="Blur event"> <br> <br>
+           <input class="change" type="text" placeholder="Change event"> <br> <br>
+           <input class="checkbox" type="checkbox"> <br> <br>
+           <input class="submit" type="submit" value="SUBMIT NOW">
+       </form>
+
+       <br><br>
+
+       <div class="div">
+           <input class="input-inside-div blur" type="text" class="focus">
+       </div>
+
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	$('.focus').focusin(function(){
+		$('.focus').css('background-color', 'orange');
+	});
+
+	$('.focus').focusout(function(){
+		$('.focus').css('background-color', 'lightgreen');
+	});
+
+	//blur
+	$('.blur').blur(function(){
+		console.log($('.blur').val());
+	});
+
+	$('div').focusout(function(){
+		console.log('div');
+	});
+
+	$('form').submit(function(event){
+		event.preventDefault();
+		console.log('not reload');
+
+	});
+
+	$('.change').change(function(){
+		console.log('change');
+	});
+
+	$('.checkbox').change(function(){
+		let check = $('.checkbox').prop('checked');
+		if(check)
+		{
+			console.log('checked');
+			$('.change').css('background-color', 'cyan');
+		}
+		else
+		{
+			console.log('unchecked');
+		}
+	});
+
+
+
+});
+
+
+</script>

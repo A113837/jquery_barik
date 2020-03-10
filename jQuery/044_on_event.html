@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+	        .box {
+	            background-color: white;
+	            max-width: 1080px;
+	            height: 1000px;
+	            box-shadow: 0 10px 10px rgba(0,0,0,.2);
+	            margin: auto;
+	            font-size: 50px;
+	            font-weight: 100;
+	        }
+	</style>
+</head>
+<body>
+
+    <div class="box">
+        This is a box
+    </div>
+
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	$('.box').click(function(){
+		console.log('click');
+	});
+
+
+	$(document).on('click', '.box', function(){
+		console.log('clicked');
+	});
+
+	$(window).scroll(function(){
+		let scrollDist = $(document).scrollTop();
+		console.log(scrollDist);
+		if(scrollDist > 10)
+		{
+			$('.box').css('background-color', 'orange');
+		}
+		else if(scrollDist < 10)
+		{
+			$('.box').css('background-color', 'lightblue');
+		}
+	});
+
+	$(window).resize(function(){
+		console.log('width: ' + $(this).width());
+		console.log('height: ' + $(this).height());
+	});
+
+});
+
+
+</script>
