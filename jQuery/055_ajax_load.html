@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+	       .box3{
+	       	background-color: lightgreen;
+	       } 
+	</style>
+</head>
+<body>
+
+    	<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+    	   <button>Load External Content</button>
+
+    	   <br><br>
+	   <div id="div2">
+	       Division 2
+	   </div>
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+	
+	$('button').click(function(){
+		$('#div2').load('./demo.txt');
+
+		$('#div1').load('../demo.txt',function(responseTxt, statusTxt, xhr){
+			if(statusTxt === 'success')
+			{
+				console.log('loaded successfully');
+			}
+			else if( statusTxt === 'error')
+			{
+				console.log('Error ' + xhr.status +', ' + xhr.statusText);
+			}
+		})
+	});
+
+
+});
+
+
+</script>
