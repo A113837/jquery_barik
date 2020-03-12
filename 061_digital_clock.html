@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+       * {
+           margin: 0;
+           padding: 0;
+       }
+
+       *,
+       *::after,
+       *::before {
+           -webkit-box-sizing: inherit;
+                   box-sizing: inherit;
+       }
+
+       html {
+           font-size: 62.5%;
+           -webkit-box-sizing: border-box;
+                   box-sizing: border-box;
+           width: 100%;
+       }
+
+       body {
+           font-size: 1.6rem;
+           background-image: linear-gradient(to right, rgba(0, 128, 0, 0.808), rgba(255, 68, 0, 0.178)), url('./some.jpg');
+           background-size: 100%;
+           background-attachment: fixed;
+       }
+
+       .header {
+           display: flex;
+           flex-direction: row;
+           justify-content: space-between;
+       }
+
+       .list {
+           display: flex;
+           flex-direction: row;
+           list-style: none;
+       }
+
+       .item {
+           margin: 0 20px 0 20px;
+       }
+
+       .link {
+           text-decoration: none;
+           color: white;
+           font-size: 30px;
+       }
+
+       .link:active,
+       .link:vissited {
+           color: #fff;
+       }
+       .link:hover {
+           color: rgb(221, 210, 210);
+       }
+
+       .logo {
+           color: white;
+           text-decoration: none;
+           font-size: 33px;
+           font-weight: 100;
+       }
+
+       .navigation {
+           padding: 20px 30px 20px 30px;
+       }
+
+       /*************Sticky Class****************/
+       .sticky {
+           background-color: white;
+           box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+           position: fixed;
+           width: 100%;
+       }
+
+       .sticky a {
+           color: grey;
+       }
+
+       .container {
+           background-color: black;
+           max-width: 400px;
+           height: 150px;
+           border: 5px solid rgb(204, 202, 202);
+           border-radius: 20px;
+           margin: auto;
+           margin-top: 60px;
+           color: white;
+           font-size: 30px;
+           text-align: center;
+           position: relative;
+           color: rgb(37, 224, 37);
+           width: 100%;
+       }
+
+       .box {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translateY(-50%) translateX(-50%);
+       }
+
+</style>
+</head>
+<body>
+
+    	<nav class="navigation">
+    	      <header class="header" class="nav">
+    	          <a class="logo" href="#">
+    	            Sticky Navigation
+    	          </a>
+    	            <ul class="list">
+    	              <li class="item">
+    	                <a href="#" class="link">Home</a>
+    	              </li>
+    	              <li class="item">
+    	                <a href="#" class="link">Link1</a>
+    	              </li>
+    	              <li class="item">
+    	                <a href="#" class="link">Link2</a>
+    	              </li>
+    	              <li class="item">
+    	                <a href="#" class="link">Link3</a>
+    	              </li>
+    	              <li class="item">
+    	                <a href="#" class="link">Link4</a>
+    	              </li>
+    	            </ul>
+    	        </header>
+    	    </nav>
+
+			
+    	    <div class="scroll" style="height: 1000px">
+    	      <!-- some text -->
+
+    	    </div>
+
+    	    <div class="container">
+    	        <div class="box">
+    	            <span class="hour">10:</span>
+    	            <span class="minute">05:</span>
+    	            <span class="second">50</span>
+    	            <span class="ampm">PM</span>            
+    	        </div>
+    	    </div>
+
+
+
+</body>
+<script type="text/javascript" src="jquery3.4.1.js"></script>
+</html>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+	
+	$(window).scroll(function(){
+		let scrollDist = $(window).scrollTop();
+		if(scrollDist > 400)
+		{
+			$('.navigation').addClass('sticky');
+		}
+		else
+		{
+			$('.navigation').removeClass('sticky');
+		}
+	});
+
+	function getTime(){
+		let date = new Date();
+
+		let hours2 = date.getHours();
+
+		if(hours2 == 0)
+		{
+			hours2 = 12;
+		}
+		else if(hours2 > 12)
+		{
+			hours2 = date.getHours()-12;
+
+			if(hours2 < 10)
+			{
+				hours2 = '0'+(date.getHours()-12);
+			}
+			
+		}
+
+		let hours = date.getHours() == 0 ? 12 : date.getHours() > 12 ? date.getHours() -12 : date.getHours();
+		let minutes = date.getMinutes() < 10 ? '0'+ date.getMinutes() : date.getMinutes();
+		let seconds = date.getSeconds() < 10 ? '0'+ date.getSeconds(): date.getSeconds();
+		let ampm = date.getHours() < 12 ? 'AM' : 'PM';
+
+		console.log(date);
+		console.log(hours2);
+		console.log(minutes);
+		console.log(seconds);
+		console.log(hours2);
+
+		$('.hour').html(hours2);
+		$('.minute').html(': ' + minutes);
+		$('.second').html(': '+ seconds);
+		$('.ampm').html(' ' + ampm);
+	};
+
+	window.setInterval(getTime, 1000);
+
+	
+
+
+});
+
+
+</script>
